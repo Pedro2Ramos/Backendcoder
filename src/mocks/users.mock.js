@@ -7,13 +7,10 @@ export const generateMockUsers = (count) => {
 
     for (let i = 0; i < count; i++) {
         users.push({
-            first_name: faker.person.firstName(),
-            last_name: faker.person.lastName(),
+            name: `${faker.person.firstName()} ${faker.person.lastName()}`,
             email: faker.internet.email(),
             password: hashedPassword,
-            role: faker.helpers.arrayElement(['user', 'admin']),
-            pets: [],
-            _id: faker.database.mongodbObjectId()
+            role: faker.helpers.arrayElement(['user', 'admin'])
         });
     }
 

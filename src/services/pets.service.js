@@ -1,4 +1,4 @@
-import { PetModel } from '../models/pet.model.js';
+import { PetModel } from '../models/pets.model.js';
 
 class PetsService {
     async createMany(pets) {
